@@ -1,0 +1,24 @@
+{
+  "name": "gulplearning",
+  "version": "1.0.0",
+  "description": "this is my first project with jade and gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mikemajesty/GetStartedGulp.git"
+  },
+  "author": "Mike Rodrigues de Lima",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikemajesty/GetStartedGulp/issues"
+  },
+  "homepage": "https://github.com/mikemajesty/GetStartedGulp#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-minify": "0.0.11"
+  }
+}
