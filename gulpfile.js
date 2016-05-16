@@ -1,11 +1,17 @@
 const gulp = require('gulp');
 const jade = require('gulp-jade');
-const minify = require('gulp-minify');
+const browserify = require('gulp-browserify');
 
 gulp.task('jade', () => {
-  return gulp.src('src/templates/**/*.jade')
-    .pipe(jade()).
-        pipe(gulp.dest('build/html'));
+  return gulp.src('src/templates/*.jade')
+    .pipe(jade())
+      .pipe(gulp.dest('build/html'));
 });
 
-gulp.task('default', ['jade'])
+gulp.task('js', () => {
+  return gulp.src('src/js/main.js')
+    .pipe(browserify({debug: true}))
+      .pipe(gulp.dest('build/js'));
+});
+
+gulp.task('default', ['jade','js'])
